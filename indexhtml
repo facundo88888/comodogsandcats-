@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Dogs and Cats - Tienda de Mascotas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f5f9ff 0%, #e0f7fa 100%); color: #333; line-height: 1.6; }
+        header { background: #00bcd4; color: white; text-align: center; padding: 2rem 1rem; box-shadow: 0 4px 10px rgba(0,188,212,.3); }
+        header h1 { font-size: 2.5rem; margin-bottom: .5rem; }
+        nav { background: #0097a7; padding: .8rem; text-align: center; }
+        nav a { color: white; margin: 0 1.2rem; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.08); transition: transform .3s, box-shadow .3s; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
+        .imagen { width: 100%; height: 200px; object-fit: cover; }
+        .detalle { padding: 1.4rem 1.2rem; }
+        .nombre { font-weight: 700; color: #0097a7; margin-bottom: .4rem; font-size: 1.2rem; }
+        .descripcion { margin-bottom: .6rem; }
+        .precio { font-size: 1.3rem; color: #e91e63; font-weight: 600; margin: .6rem 0; }
+        .boton { background: #00bcd4; color: white; border: none; padding: .9rem; width: 100%; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background .3s; }
+        .boton:hover { background: #008ba3; }
+        footer { text-align: center; padding: 2rem; background: #0097a7; color: white; margin-top: 3rem; }
+        .whatsapp { color: #25d366; font-weight: 600; text-decoration: none; font-size: 1.1rem; }
+        @media (max-width: 600px) { header h1 { font-size: 2rem; } .productos { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Como Dogs and Cats</h1>
+        <p>Todo lo que tu mejor amigo necesita. Productos de calidad para perros y gatos.</p>
+    </header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <main id="productos">
+        <div class="productos">
+            <!-- Producto 1 -->
+            <div class="card">
+                <img class="imagen" src="https://images.unsplash.com/photo-1583511655857-d19b7a7a54df?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Collar ajustable">
+                <div class="detalle">
+                    <h3 class="nombre">Collar Ajustable</h3>
+                    <p class="descripcion">Resistente y suave para el cuello delicado de tu mascota.</p>
+                    <p class="precio">€14.99</p>
+                    <button class="boton" onclick="window.open('https://wa.me/34624883558?text=Hola,%20quiero%20comprar%20el%20Collar%20Ajustable')">Comprar ahora</button>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="card">
+                <img class="imagen" src="https://images.unsplash.com/photo-1597089926241-8b6a8b76fc4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Cama para mascotas">
+                <div class="detalle">
+                    <h3 class="nombre">Cama Cómoda</h3>
+                    <p class="descripcion">Cama mullida y lavable para un descanso perfecto.</p>
+                    <p class="precio">€29.99</p>
+                    <button class="boton" onclick="window.open('https://wa.me/34624883558?text=Hola,%20quiero%20comprar%20la%20Cama%20Cómoda')">Comprar ahora</button>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="card">
