@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Dogs & Cats | Productos Premium para Mascotas</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#f5f9ff,#e0f7fa);
+  color:#333;
+}
+header{
+  background:linear-gradient(135deg,#00bcd4,#0097a7);
+  color:white;
+  text-align:center;
+  padding:3.5rem 1rem;
+}
+header h1{font-size:3rem;font-weight:700}
+header p{max-width:720px;margin:1rem auto;font-size:1.1rem}
+
+.badges{
+  display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:1.5rem
+}
+.badge{
+  background:rgba(255,255,255,.15);
+  padding:.5rem 1rem;border-radius:20px;font-size:.9rem
+}
+
+.productos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2.2rem;
+  max-width:1300px;
+  margin:3.5rem auto;
+  padding:0 1rem;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,.12);
+  transition:.35s ease;
+}
+.card:hover{
+  transform:translateY(-8px) scale(1.01);
+}
+
+.card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.detalle{
+  padding:1.4rem 1.3rem;
+}
+
+.detalle h3{
+  color:#0097a7;
+  font-size:1.25rem;
+  margin-bottom:.3rem
+}
+
+.detalle p{
+  font-size:.95rem;
+  margin-bottom:.6rem
+}
+
+.precio{
+  font-size:1.4rem;
+  color:#e91e63;
+  font-weight:700;
+  margin:.6rem 0;
+}
+
+.boton{
+  width:100%;
+  padding:.95rem;
+  border:none;
+  border-radius:10px;
+  background:#00bcd4;
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+.boton:hover{background:#008ba3}
+
+.confianza{
+  text-align:center;
+  max-width:900px;
+  margin:4rem auto 2rem;
+  font-size:1rem;
+  color:#555;
+}
+
+footer{
+  background:#0097a7;
+  color:white;
+  text-align:center;
+  padding:2.2rem 1rem;
+  margin-top:3rem;
+}
+
+@media(max-width:600px){
+  header h1{font-size:2.2rem}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Como Dogs & Cats</h1>
+<p>Los productos más vendidos y mejor valorados para mejorar la vida de tu perro o gato. 
+Calidad premium, entrega rápida y atención directa.</p>
+
+<div class="badges">
+  <div class="badge">🐾 Más vendidos</div>
+  <div class="badge">⭐ Clientes satisfechos</div>
+  <div class="badge">📦 Envío a toda España</div>
+  <div class="badge">💬 Atención por WhatsApp</div>
+</div>
+</header>
+
+<section class="productos">
+
+<script>
+const productos=[
+["Collar LED Nocturno","Mayor seguridad en paseos nocturnos. Visible, cómodo y resistente.","€24.99","led dog collar"],
+["Arnés Antitirones Premium","Control total sin dañar el cuello. Ideal para perros activos.","€34.99","dog harness"],
+["Cama Calmante Antiestrés","Reduce ansiedad y mejora el descanso. Muy recomendada.","€49.99","calming dog bed"],
+["Bebedero Automático","Agua fresca siempre disponible. Perfecto para todo el día.","€39.99","pet water dispenser"],
+["Cepillo Quita Pelos","Elimina el pelo muerto en segundos. Fácil y efectivo.","€19.99","pet hair brush"],
+["Juguete Indestructible","Resistente, seguro y entretenido durante horas.","€17.99","dog chew toy"],
+["Cámara WiFi para Mascotas","Observa y habla con tu mascota estés donde estés.","€79.99","pet camera"],
+["Comedero Automático","Alimentación exacta incluso cuando no estás en casa.","€59.99","automatic pet feeder"],
+["Transportín Plegable","Cómodo, seguro y fácil de guardar.","€44.99","pet carrier"],
+["Alfombra Olfativa","Estimula la mente y reduce el estrés.","€29.99","sniff mat dog"],
+["Cortauñas con Luz LED","Corte preciso y seguro sin dañar.","€21.99","pet nail trimmer"],
+["Mochila para Gatos","Viajes cómodos y sin estrés.","€54.99","cat backpack"]
+];
+
+document.write(productos.map(p=>`
+<div class="card">
+<img src="https://source.unsplash.com/900x700/?${p[3]}" alt="${p[0]}">
+<div class="detalle">
+<h3>${p[0]}</h3>
+<p>${p[1]}</p>
+<div class="precio">${p[2]}</div>
+<button class="boton"
+onclick="window.open('https://wa.me/34624883558?text=Hola,%20quiero%20comprar%20${encodeURIComponent(p[0])}')">
+Comprar ahora por WhatsApp
+</button>
+</div>
+</div>
+`).join(""));
+</script>
+
+</section>
+
+<div class="confianza">
+🔒 Compra segura · 💬 Atención directa · 📦 Sin intermediarios · ⭐ Productos probados
+</div>
+
+<footer>
+<p>¿Tienes dudas? Escríbenos por WhatsApp y te ayudamos al instante.</p>
+<p>© 2026 Como Dogs & Cats</p>
+</footer>
+
+</body>
+</html> 
